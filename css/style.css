@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+header{
+    height: 100vh;
+    background-image: url("../images/dog-photo-withApp4.png");
+    background-size: cover;
+    background-position: bottom right;
+    background-color: #FDEEDC;
+
+}
+.header_img{
+    display: none;
+}
