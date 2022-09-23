@@ -1,21 +1,201 @@
+/*
+COLOR PALETTE: 
+https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
+PRIMARY: FDEEDC
+SECONDARY: FFD8A9
+ACCENT1: F1A661
+ACCENT2: E38B29
+
+*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
   
-}
-body{
-    font-family: 'Montserrat', sans-serif;
+  body{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
-}
-header{
+  }
+  
+  header{
+    position: relative;
     height: 100vh;
     background-image: url("../images/dog-photo-withApp4.png");
     background-size: cover;
     background-position: bottom right;
-    background-color: #FDEEDC;
-
-}
-.header_img{
+    background-color: #fdeedc; /*PRIMARY*/
+    /* color: #fff; */
+  }
+  
+  .navColor{
+    background-color: #fdeedc !important;
+  }
+  
+  .container-fluid{
+    background-color: hsl(33, 89%, 93%);
+    font-size: 1.5rem;
+  }
+  
+  .navbar-brand{
+    font-size:2rem;
+    padding: 0.5% 10% 0;
+    text-transform: uppercase;
+  }
+  
+  .navbar-nav{
+    padding: 5% 8%; 
+    /* position:sticky; */
+  }
+  
+  .header__heading{
+    position: relative;
+    top: 25%;
+    left:5%;
+    width: 40%;
+  }
+  
+  h1, p{
+    animation: fadeIn 2s ease-in;
+  }
+  
+  @keyframes fadeIn{
+    0%{
+      opacity:0;
+    }
+  
+    50%{
+      opacity: 0.5;
+    }
+  
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  .header__img {
     display: none;
-}
+  }
+  
+  img {
+    width: 400px;
+    height: 400px;
+  }
+  
+  
+  
+  /**SECTION1 GALLERY**/
+  
+  .gallery{
+    height: 80vh;
+  }
+  
+  .gallery__img{
+    height: 15rem;
+    width: 15rem;
+  }
+  
+  
+  .inner{
+    overflow: hidden;
+  }
+  
+  .inner img{
+    transition: all 1.5s ease;
+  }
+  
+  .inner:hover img{
+    transform: scale(1.5);
+    cursor:pointer;
+  }
+  
+  
+  
+  /**************************************MEDIA QUERRIES********************************/
+  /**FIRST BREAKPOINT MEDIA MAX-WIDTH: 600px**/
+  
+  /*HEADER SECTION*/
+  @media only screen and (max-width: 600px){
+     header{
+      background-image: none;
+     }
+  
+     .navbar-brand{
+        font-size: 1.5rem;
+        padding: 0;
+        
+     }
+  
+     .navbar-nav{
+      font-size: 1rem;
+     }
+  
+     .dropdown{
+      position: relative;
+      z-index: 2;
+     }
+  
+    
+      /**NOTE TO SELF: Issue with the dropdown link"*/
+  
+  
+     .header__heading{
+      position:absolute;
+      width: 75%;
+      top:33%;
+      left: 15%;
+      padding: 2%;
+      background-color:green;
+     }
+  
+  
+     .header__img{
+       position: absolute;
+       top: 75%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       display: inline-block;
+       width: 12rem;
+       height: 12rem;
+       padding: 2%;
+       margin: 0;
+       animation: fadeUp 1s ease-in;
+     }
+  
+     .header__img img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 5px solid black;
+     }
+     
+     @keyframes fadeUp{
+       0%{
+        opacity:0;
+        top:80%;
+       }
+  
+       50%{
+        opacity: 0.5;
+       }
+  
+       100%{
+        opacity: 1;
+         top: 75%; 
+       }
+      
+     }
+  
+     h1{
+      z-index: 1;
+      font-size: 1.8rem;
+     }
+  
+     p{
+      font-size: .8rem;
+     }
+  
+  }
+  
