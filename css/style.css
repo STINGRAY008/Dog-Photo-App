@@ -89,14 +89,18 @@ ACCENT2: E38B29
   /**SECTION1 GALLERY**/
   
   .gallery{
-    height: 80vh;
+    height: 100vh;
+    padding: 5%;
   }
-  
-  .gallery__img{
-    height: 15rem;
-    width: 15rem;
+  .card{
+    /* background-color: orangered; */
+    width: 18rem;
+    height: 25rem;
+    margin: 0 auto;
+    box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.69);
+   -webkit-box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.69);
+  -moz-box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.69);
   }
-  
   
   .inner{
     overflow: hidden;
@@ -107,12 +111,32 @@ ACCENT2: E38B29
   }
   
   .inner:hover img{
-    transform: scale(1.5);
+    transform: scale(1.1);
     cursor:pointer;
   }
+  gallery_link::after{
+    content: '';
+    width: 0;
+    height: 2px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  .gallery_link:hover::after{
+    width: 5%;
+    display: block;
+    margin: auto;
+    transition: .3s;
+    background-color: #F1A661;
+  }
+
   
   
   
+
+
+
   /**************************************MEDIA QUERRIES********************************/
   /**FIRST BREAKPOINT MEDIA MAX-WIDTH: 600px**/
   
